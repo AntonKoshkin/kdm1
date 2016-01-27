@@ -1,0 +1,65 @@
+.foot-contacts
+	display none
+	
+	@media (min-width md-min)
+		display block
+		margin-right 140px
+		
+		.foot__title
+			margin-bottom 27px
+
+		&__phone
+			font-size 18px
+			font-weight 500
+			color black
+			display block
+			margin-bottom 10px
+			
+			&:nth-last-child(2)
+				margin-bottom 25px
+		
+		&__mail
+			font-size 14px
+			font-weight 500
+			color blue-link
+
+.kdm
+	margin-top 30px
+	
+	&:before
+		sprite($png_kdm)
+		
+		display inline-block
+		content ''
+		float left
+		margin-right 20px
+		
+	&__text
+		font-size 14px
+		font-weight 400
+		color black
+	
+	&__a
+		color blue-link
+		text-decoration underline
+	
+	@media (min-width md-min)
+		position relative
+		margin-top 50px
+	
+		&:before			
+			position absolute
+			left 0
+			top 0
+			bottom 0
+			margin auto
+		
+		&__text
+			margin-left 45px
+	
+	@media (min-width lg-min)
+		&:before
+			sprite($png_kdm_big)
+		
+		&__text
+			margin-left 65px

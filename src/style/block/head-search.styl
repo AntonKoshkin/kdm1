@@ -1,41 +1,47 @@
 .head-search
 	position relative
+	display none
 		
-	&__form
-		&:after
-			content ''
-			display inline-block
-			position absolute
-			top 0
-			right 10px
-			bottom 0
-			margin auto
-			sprite($png_search)
-	
-	&__input
-		width 100%
-		font-weight normal
-		font-size 12px
-		border 1px solid #c6cdd2
-		box-shadow inset 0 1px 4px rgba(black, .17)
-		padding 8px 37px 8px 8px
-		outline none
-	
-	&__btn
-		width 35px
-		height 32px
-		position absolute
-		right 0
-		top 0
-		background none
-		border none
-		z-index 3
-		outline none
-	
 	@media (min-width md-min)
+		display block
+		margin-left 110px
+		
+		&__form
+			&:after
+				content ''
+				display inline-block
+				position absolute
+				top 0
+				right 10px
+				bottom 0
+				margin auto
+				sprite($png_search)
+		
+		&__input
+			width 100%
+			font-weight normal
+			font-size 12px
+			border 1px solid #c6cdd2
+			box-shadow inset 0 1px 4px rgba(black, .17)
+			padding 8px 37px 8px 8px
+			outline none
+		
+		&__btn
+			width 35px
+			height 32px
+			position absolute
+			right 0
+			top 0
+			background none
+			border none
+			z-index 3
+			outline none
+	
 		.header--fixed &
 			margin-top 13px
 	
 	@media (min-width lg-min)
+		margin-left 0
+		
 		&__form
 			margin-left 50px

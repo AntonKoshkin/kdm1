@@ -6,8 +6,8 @@ $('body').on('click', '#navBtn', function(event) {
 	}
 });
 
-$(window).resize(function(event) {
-	if ($(window).width() >= 1263) {
-		$('#nav').css('display', 'block');
-	}
-});
+// $(window).resize(function(event) {
+// 	if ($(window).width() >= 1263) {
+// 		$('#nav').css('display', 'block');
+// 	}
+// });

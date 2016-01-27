@@ -1,0 +1,35 @@
+-fServ = {}
+
+-fServ.item1 = {}
+-fServ.item1.title = 'Широкоформатная печать'
+-fServ.item1.href = '#'
+
+-fServ.item2 = {}
+-fServ.item2.title = 'Цифровая печать'
+-fServ.item2.href = '#'
+
+-fServ.item3 = {}
+-fServ.item3.title = 'Шелкография'
+-fServ.item3.href = '#'
+
+-fServ.item4 = {}
+-fServ.item4.title = 'Плоттерная резка'
+-fServ.item4.href = '#'
+
+-fServ.item5 = {}
+-fServ.item5.title = 'Лазерная гравировка'
+-fServ.item5.href = '#'
+
+-fServ.item6 = {}
+-fServ.item6.title = 'Все услуги'
+-fServ.item6.href = '#'
+
+mixin footServ()
+	ul.foot__list
+		each item in fServ
+			li.foot__item
+				a.foot__a(href=item.href)=item.title
+
+.foot-Serv
+	h4.foot__title Продукция
+	+footServ()

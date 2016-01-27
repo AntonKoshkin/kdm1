@@ -9220,11 +9220,11 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
-	$(window).resize(function(event) {
-		if ($(window).width() >= 1263) {
-			$('#nav').css('display', 'block');
-		}
-	});
+	// $(window).resize(function(event) {
+	// 	if ($(window).width() >= 1263) {
+	// 		$('#nav').css('display', 'block');
+	// 	}
+	// });
 	$(window).scroll(function(event) {
 		if ($(window).scrollTop() > 150) {
 			$('body').addClass('header--fixed');

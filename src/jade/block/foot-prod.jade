@@ -1,0 +1,35 @@
+-fProd = {}
+
+-fProd.item1 = {}
+-fProd.item1.title = 'Визитки'
+-fProd.item1.href = '#'
+
+-fProd.item2 = {}
+-fProd.item2.title = 'Листовки'
+-fProd.item2.href = '#'
+
+-fProd.item3 = {}
+-fProd.item3.title = 'Буклеты'
+-fProd.item3.href = '#'
+
+-fProd.item4 = {}
+-fProd.item4.title = 'Каталоги'
+-fProd.item4.href = '#'
+
+-fProd.item5 = {}
+-fProd.item5.title = 'Брошюры'
+-fProd.item5.href = '#'
+
+-fProd.item6 = {}
+-fProd.item6.title = 'Вся продукция'
+-fProd.item6.href = '#'
+
+mixin footProd()
+	ul.foot__list
+		each item in fProd
+			li.foot__item
+				a.foot__a(href=item.href)=item.title
+
+.foot-prod
+	h4.foot__title Продукция
+	+footProd()

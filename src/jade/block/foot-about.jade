@@ -1,0 +1,35 @@
+-fAbout = {}
+
+-fAbout.item1 = {}
+-fAbout.item1.title = 'Примеры работ'
+-fAbout.item1.href = '#'
+
+-fAbout.item2 = {}
+-fAbout.item2.title = 'Новости'
+-fAbout.item2.href = '#'
+
+-fAbout.item3 = {}
+-fAbout.item3.title = 'Оплата и доставка'
+-fAbout.item3.href = '#'
+
+-fAbout.item4 = {}
+-fAbout.item4.title = 'Контакты'
+-fAbout.item4.href = '#'
+
+mixin footAbout()
+	ul.foot__list
+		each item in fAbout
+			li.foot__item
+				a.foot__a(href=item.href)=item.title
+
+.foot-about
+	h4.foot__title О компании
+	+footAbout()
+.foot-links
+	ul.foot-links__list
+		li.foot-links__item
+			a.foot-links__a.foot-links__a--twit(href='http://twitter.com' target='_blank') Мы в Twitter
+		li.foot-links__item
+			a.foot-links__a.foot-links__a--fb(href='http://facebook.com' target='_blank') Мы в Facebook
+		li.foot-links__item
+			a.foot-links__a.foot-links__a--vk(href='http://vk.com' target='_blank') Мы в VKontakte

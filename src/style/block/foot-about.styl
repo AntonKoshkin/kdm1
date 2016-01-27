@@ -1,0 +1,51 @@
+.foot-about
+	.foot__item
+		.foot__a
+			&:last-child
+				margin-top 0
+				color black
+	
+	@media (min-width md-min)
+		margin-bottom 40px
+
+.foot-links
+	display inline-block
+	float right
+	
+	&__item
+		display inline-block
+		vertical-align middle
+		
+		&:not(:last-child)
+			margin-right 25px
+			
+	&__a
+		display inline-block
+		opacity .3
+		
+		&:hover
+			opacity 1
+		
+		&--twit
+			sprite($png_twit)
+			
+			
+		&--fb
+			sprite($png_fb)
+			
+		&--vk
+			sprite($png_vk)
+	
+	@media (min-width md-min)
+		float none
+		display block
+		
+			&--twit
+				sprite($png_twit_big)
+				
+				
+			&--fb
+				sprite($png_fb_big)
+				
+			&--vk
+				sprite($png_vk_big)
