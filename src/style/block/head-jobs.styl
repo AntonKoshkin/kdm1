@@ -1,0 +1,119 @@
+.head-jobs
+	@media (min-width md-min)
+		float right
+		
+		&__list
+			border-bottom 1px solid #c6cdd2
+			display inline-block
+			margin-top 7px
+
+		&__item
+			font-size 12px
+			font-weight bold		
+			position relative
+			bottom -1px
+			display inline-block
+			padding-right 20px
+			padding-bottom 10px
+			border-bottom 1px solid rgba(#e60808, 0)
+			
+			&:not(:last-child)
+				margin-right 45px
+			
+			&:after
+				content ''
+				display inline-block
+				width 0
+				height 0
+				border-top 7px solid #c6cdd2
+				border-right 4px solid transparent
+				border-left 4px solid transparent
+				position absolute
+				right 3px
+				top 3px
+			
+			&:hover
+				color #e60808
+				border-color rgba(#e60808, 1)
+			
+			&:last-child
+				.serv-nav__sublist
+					display none
+		
+		&__sublist
+			display none
+			text-align left
+			list-style-type none
+			z-index 1
+			position absolute
+			top 103%
+			left 0
+			background-color white
+			columns 3
+			padding 30px 20px
+			column-rule 1px solid rgba(gray-very-light, .4)
+			box-shadow 0 1px 5px rgba(black, .1)
+			max-height 310px
+			
+		&__item:hover > &__sublist
+			display inline-block
+		
+		&__subitem
+			line-height 1.5
+			padding 20px 20px 0
+			vertical-align top
+			
+			&:nth-child(5)
+				padding-bottom 20px
+			
+			&:nth-child(1)
+			&:nth-child(6)
+			&:nth-child(11)
+				padding-top 0
+		
+		&__suba
+			mix-serv-nav-suba()
+			
+			display block
+		
+		&__item:nth-child(2) &__sublist
+			padding-top 30px
+			padding-bottom 30px			
+
+		&__item:nth-child(2) &__subitem
+			padding 10px 20px
+			
+			&:nth-child(2n+1)
+				padding-top 0
+			
+			&:nth-child(2n)
+				padding-bottom 0
+		
+		&__item:nth-child(3) &__sublist
+			max-height 600px
+		
+		&__item:nth-child(3) &__subitem
+			padding 20px 20px 0
+			break-inside avoid
+			
+			&:nth-child(1)
+			&:nth-child(5)
+			&:nth-child(8)
+				padding-top 0
+		
+		&__title
+		&__suba
+			cursor pointer
+	
+	@media (min-width md-min)
+		.header--fixed &
+			display none
+	
+	@media(min-width lg-min)
+		float none
+		
+		// &__list
+		// 	display block
+		
+		&__item:nth-child(n)
+			margin 0 ((630 - 306)/6)px

@@ -1,0 +1,76 @@
+mix-logo()
+	font-size logo-small
+	font-family coresans
+	text-transform uppercase
+	color white
+	
+	@media (min-width md-min)
+		font-size logo-big
+
+mix-cont-phone()
+	font-size cont-phone
+	font-weight 500
+	color black
+
+mix-cont-bc()
+	font-size cont-bc
+	font-weight 500
+	color blue-link
+	text-decoration underline
+
+mix-cont-req()
+	font-size cont-req
+	font-weight 500
+	color white
+		
+serv-nav-btn()
+	background linear-gradient(to bottom, blue-btn 0%, white 100%)
+	font-size serv-nav
+	width 89px
+	height 33px
+	box-shadow inset 0 0 1px rgba(black, .09),
+		0 0 1px rgba(black, .35)
+	font-weight normal
+	text-align center
+	line-height 33px
+	vertical-align middle
+	display inline-block
+	cursor pointer
+	
+	&:not(:last-child)
+		margin-right 5px
+	
+	@media (min-width lg-min)
+		width 103px
+
+mix-serv-nav-suba()
+	font-size serv-nav-suba
+	color blue-link
+	text-decoration underline
+	font-weight normal
+
+
+mix-brcr()
+	font-size brcr-text
+	width 400px
+	color blue-link
+	text-decoration underline
+
+mix-news-title()
+	font-size news-title
+	font-weight 400
+
+mix-news-item-title()
+	font-size news-item-title
+	color blue-link
+	text-decoration underline
+	font-weight 300
+
+mix-news-item-text()
+	font-size news-item-text
+	font-weight 400
+
+mix-news-item-time()
+	font-size news-item-time
+	font-weight 400
+	color white

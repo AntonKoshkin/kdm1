@@ -1,0 +1,22 @@
+.head-logo
+	mix-logo()
+	
+	display inline-block
+	padding 9px 9.5px
+	background-color red-logo
+	border-radius 4px
+	
+	@media (min-width md-min)
+		display block
+		padding 11px 0
+		text-align center
+		letter-spacing -.5px
+		margin-bottom 23px
+		
+		.header--fixed &
+			margin-bottom 0
+	
+	@media (min-width lg-min)
+		display inline-block
+		padding 12px 19px
+		letter-spacing normal

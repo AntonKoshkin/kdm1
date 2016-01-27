@@ -1,0 +1,79 @@
+-newsItem = {}
+
+-newsItem.news_a = {}
+-newsItem.news_a.img = 'img/news__a.jpg'
+-newsItem.news_a.time = '16 октября 2015г.'
+-newsItem.news_a.datetime = '2015-10-16'
+-newsItem.news_a.title = '1 октября повышение цен<br>на&nbsp;календари'
+-newsItem.news_a.text = 'Еще две недели печатаем календари по летним ценам! При заказе от 400 календарей трио — дизайн квартальника с дизайнером Таней бесплатно.'
+-newsItem.news_a.alt = 'повышение цен на календари'
+
+-newsItem.news_b = {}
+-newsItem.news_b.img = 'img/news__b.jpg'
+-newsItem.news_b.time = '16 октября 2015г.'
+-newsItem.news_b.datetime = '2015-10-16'
+-newsItem.news_b.title = 'Клипарты на 2016 год —<br>год&nbsp;обезьяны'
+-newsItem.news_b.text = 'Посетители нашего сайта всегда могли скачать у нас все что нужно для изготовления своих фирменных календарей.'
+-newsItem.news_b.alt = 'Клипарты на 2016 год'
+
+-newsItem.news_c = {}
+-newsItem.news_c.img = 'img/news__c.jpg'
+-newsItem.news_c.time = '16 октября 2015г.'
+-newsItem.news_c.datetime = '2015-10-16'
+-newsItem.news_c.title = 'Дизайн календарей бесплатно при&nbsp;заказе от 500 шт.'
+-newsItem.news_c.text = 'Cпешите заказать квартальные календари в августе и получайте бесплатный дизайн календаря с нашим живым дизайнером при заказе от 500 шт. квартальных календарей.'
+-newsItem.news_c.alt = 'Дизайн календарей бесплатно'
+
+-newsItem.news_d = {}
+-newsItem.news_d.img = 'img/news__d.jpg'
+-newsItem.news_d.time = '16 октября 2015г.'
+-newsItem.news_d.datetime = '2015-10-16'
+-newsItem.news_d.title = 'Закажи тельняшку с логотипом!'
+-newsItem.news_d.text = 'Хотите быть стильными в наше «Непредсказуемое ПИТЕРСКОЕ лето»? Закажи тельняшку с логотипом!'
+-newsItem.news_d.alt = 'Закажи тельняшку'
+
+-newsItem.news_e = {}
+-newsItem.news_e.img = 'img/news__e.jpg'
+-newsItem.news_e.time = '16 октября 2015г.'
+-newsItem.news_e.datetime = '2015-10-16'
+-newsItem.news_e.title = 'Награждение - процесс всегда торжественный'
+-newsItem.news_e.text = 'Наша компания располагает собственным большим производством, что позволяет выполнить нанесение разными способами: гравировкой, УФ-печатью, шелкографией ...'
+-newsItem.news_e.alt = 'Награждение'
+
+-newsItem.news_f = {}
+-newsItem.news_f.img = 'img/news__f.jpg'
+-newsItem.news_f.time = '16 октября 2015г.'
+-newsItem.news_f.datetime = '2015-10-16'
+-newsItem.news_f.title = 'Новые размеры и цвета пакетов'
+-newsItem.news_f.text = 'На нашем сайте в разделе полиэтиленовые пакеты ПВД с логотипом появились новые цвета и размеры пакетов ПВД под нанесение ваших логотипов.'
+-newsItem.news_f.alt = 'Новые размеры и цвета'
+
+-newsItem.news_g = {}
+-newsItem.news_g.img = 'img/news__g.jpg'
+-newsItem.news_g.time = '16 октября 2015г.'
+-newsItem.news_g.datetime = '2015-10-16'
+-newsItem.news_g.title = 'Пакеты ПВД с логотипом — от 50 шт.'
+-newsItem.news_g.text = 'Очередная антикризисная мера в ПРИНТ САЛОНе — уменьшение минимального количества пакетов ПВД при заказе печати шелкографией до 50 шт.'
+-newsItem.news_g.alt = 'Пакеты ПВД'
+
+-newsItem.news_h = {}
+-newsItem.news_h.img = 'img/news__h.jpg'
+-newsItem.news_h.time = '16 октября 2015г.'
+-newsItem.news_h.datetime = '2015-10-16'
+-newsItem.news_h.title = 'Обучение шелкографии в январе'
+-newsItem.news_h.text = 'Дорогие клиенты! Поздравляем Вас с прошедшими праздниками! Желаем вам побыстрее войти в рабочий ритм, и спешим сообщить о том что занятия ...'
+-newsItem.news_h.alt = 'Обучение шелкографии'
+
+mixin newsItems()
+	each val in newsItem
+		.col-sm-12.col-md-4.col-lg-3
+			.news-item
+				.news-item__face
+					img.news-item__img(src=val.img, alt=val.alt)
+					time.news-item__time(datetime=val.datetime)=val.time
+				.news-item__desc
+					a.news-item__link(href='#')
+						h3.news-item__title!=val.title
+					p.news-item__text!=val.text
+
++newsItems()

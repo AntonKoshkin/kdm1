@@ -1,0 +1,154 @@
+-headJob = {}
+
+-headJob.ufPrint = {}
+-headJob.ufPrint.title = 'УФ-печать'
+
+-headJob.ufPrint.item01 = {}
+-headJob.ufPrint.item01.href = '#'
+-headJob.ufPrint.item01.title = 'Чехлы&nbsp;для&nbsp;телефонов'
+
+-headJob.ufPrint.item02 = {}
+-headJob.ufPrint.item02.href = '#'
+-headJob.ufPrint.item02.title = 'Ручки'
+
+-headJob.ufPrint.item03 = {}
+-headJob.ufPrint.item03.href = '#'
+-headJob.ufPrint.item03.title = 'Зажигалки'
+
+-headJob.ufPrint.item04 = {}
+-headJob.ufPrint.item04.href = '#'
+-headJob.ufPrint.item04.title = 'Бейджи именные'
+
+-headJob.ufPrint.item05 = {}
+-headJob.ufPrint.item05.href = '#'
+-headJob.ufPrint.item05.title = 'Бейджи с окном'
+
+-headJob.ufPrint.item06 = {}
+-headJob.ufPrint.item06.href = '#'
+-headJob.ufPrint.item06.title = 'Еженедельники'
+
+-headJob.ufPrint.item07 = {}
+-headJob.ufPrint.item07.href = '#'
+-headJob.ufPrint.item07.title = 'Флешки'
+
+-headJob.ufPrint.item08 = {}
+-headJob.ufPrint.item08.href = '#'
+-headJob.ufPrint.item08.title = 'Карандаши'
+
+-headJob.ufPrint.item09 = {}
+-headJob.ufPrint.item09.href = '#'
+-headJob.ufPrint.item09.title = 'Таблички'
+
+-headJob.ufPrint.item10 = {}
+-headJob.ufPrint.item10.href = '#'
+-headJob.ufPrint.item10.title = 'На продукции заказчика'
+
+-headJob.ufPrint.item11 = {}
+-headJob.ufPrint.item11.href = '#'
+-headJob.ufPrint.item11.title = 'На пластике'
+
+-headJob.ufPrint.item12 = {}
+-headJob.ufPrint.item12.href = '#'
+-headJob.ufPrint.item12.title = 'На коже'
+
+-headJob.ufPrint.item13 = {}
+-headJob.ufPrint.item13.href = '#'
+-headJob.ufPrint.item13.title = 'На стекле'
+
+-headJob.ufPrint.item14 = {}
+-headJob.ufPrint.item14.href = '#'
+-headJob.ufPrint.item14.title = 'На дереве'
+
+-headJob.ufPrint.item15 = {}
+-headJob.ufPrint.item15.href = '#'
+-headJob.ufPrint.item15.title = 'На металле'
+
+
+-headJob.numPrint = {}
+-headJob.numPrint.title = 'Цифровая печать'
+
+-headJob.numPrint.item01 = {}
+-headJob.numPrint.item01.href = '#'
+-headJob.numPrint.item01.title = 'Визитки'
+
+-headJob.numPrint.item02 = {}
+-headJob.numPrint.item02.href = '#'
+-headJob.numPrint.item02.title = 'Календари'
+
+-headJob.numPrint.item03 = {}
+-headJob.numPrint.item03.href = '#'
+-headJob.numPrint.item03.title = 'Листовки'
+
+-headJob.numPrint.item04 = {}
+-headJob.numPrint.item04.href = '#'
+-headJob.numPrint.item04.title = 'Плакаты'
+
+-headJob.numPrint.item05 = {}
+-headJob.numPrint.item05.href = '#'
+-headJob.numPrint.item05.title = 'Флаера'
+
+-headJob.numPrint.item06 = {}
+-headJob.numPrint.item06.href = '#'
+-headJob.numPrint.item06.title = 'Блокноты'
+
+
+-headJob.silk = {}
+-headJob.silk.title = 'Шелкография'
+
+-headJob.silk.item01 = {}
+-headJob.silk.item01.href = '#'
+-headJob.silk.item01.title = 'Футболки'
+
+-headJob.silk.item02 = {}
+-headJob.silk.item02.href = '#'
+-headJob.silk.item02.title = 'Пакеты ПВД'
+
+-headJob.silk.item03 = {}
+-headJob.silk.item03.href = '#'
+-headJob.silk.item03.title = 'Папки уголки'
+
+-headJob.silk.item04 = {}
+-headJob.silk.item04.href = '#'
+-headJob.silk.item04.title = 'Плакаты'
+
+-headJob.silk.item05 = {}
+-headJob.silk.item05.href = '#'
+-headJob.silk.item05.title = 'Контрольные браслеты'
+
+-headJob.silk.item06 = {}
+-headJob.silk.item06.href = '#'
+-headJob.silk.item06.title = 'Ленты для бейджей'
+
+-headJob.silk.item07 = {}
+-headJob.silk.item07.href = '#'
+-headJob.silk.item07.title = 'Именные&nbsp;бейджи с&nbsp;окном'
+
+-headJob.silk.item08 = {}
+-headJob.silk.item08.href = '#'
+-headJob.silk.item08.title = 'Файлики'
+
+-headJob.silk.item09 = {}
+-headJob.silk.item09.href = '#'
+-headJob.silk.item09.title = 'Кружки (деколь)'
+
+-headJob.silk.item10 = {}
+-headJob.silk.item10.href = '#'
+-headJob.silk.item10.title = 'Визитки'
+
+-headJob.silk.item11 = {}
+-headJob.silk.item11.href = '#'
+-headJob.silk.item11.title = 'Календари'
+
+mixin headJobs()
+	.head-jobs
+		ul.head-jobs__list
+			each item in headJob
+				li.head-jobs__item
+					span.head-jobs__title=item.title
+					ul.head-jobs__sublist
+						each subitem in item
+							if subitem.href
+								li.head-jobs__subitem
+									a.head-jobs__suba(href=subitem.href)!=subitem.title
+
++headJobs()

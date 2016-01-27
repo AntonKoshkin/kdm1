@@ -1,0 +1,39 @@
+-navItem = {}
+
+-navItem.company = {}
+-navItem.company.href = '#'
+-navItem.company.title = 'Компания'
+-navItem.company.id = 'company'
+
+-navItem.portfolio = {}
+-navItem.portfolio.href = '#'
+-navItem.portfolio.title = 'Примеры работ'
+-navItem.portfolio.id = 'portfolio'
+
+-navItem.for_clients = {}
+-navItem.for_clients.href = '#'
+-navItem.for_clients.title = 'Клиентам'
+-navItem.for_clients.id = 'for_clients'
+
+-navItem.quality = {}
+-navItem.quality.href = '#'
+-navItem.quality.title = 'Качество'
+-navItem.quality.id = 'quality'
+
+-navItem.contacts = {}
+-navItem.contacts.href = '#'
+-navItem.contacts.title = 'Контакты'
+-navItem.contacts.id = 'contacts'
+
+mixin navItems()
+	nav.navigation#nav
+		ul.navigation__list#navList
+			each val in navItem
+				if page_id === val.id
+					li.navigation__item
+						a.navigation__a.navigation__a--active(href=val.href)=val.title
+				else
+					li.navigation__item
+						a.navigation__a(href=val.href)=val.title
+
++navItems()

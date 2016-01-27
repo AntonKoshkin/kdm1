@@ -1,0 +1,18 @@
+extends jade/template
+
+block id
+	-page_id = 'news'
+
+block title
+	title news
+
+block content
+	main
+		section.news
+			.container
+				include jade/block/breadcrumbs
+				
+				h1.news__title Новости и статьи
+
+				.row
+					include jade/block/news-item

@@ -1,0 +1,83 @@
+-servNav = {}
+
+-servNav.prods = {}
+-servNav.prods.title = 'Продукция'
+
+
+
+-servNav.prods.item01 = {}
+-servNav.prods.item01.href = '#'
+-servNav.prods.item01.title = 'Бейджи&nbsp;и&nbsp;аксессуары'
+-servNav.prods.item01.wrap = true
+
+-servNav.prods.item02 = {}
+-servNav.prods.item02.href = '#'
+-servNav.prods.item02.title = 'Ручки&nbsp;и&nbsp;карандаши с логотипом'
+-servNav.prods.item02.wrap = false
+
+-servNav.prods.item03 = {}
+-servNav.prods.item03.href = '#'
+-servNav.prods.item03.title = 'Кружки'
+-servNav.prods.item03.wrap = false
+
+-servNav.prods.item04 = {}
+-servNav.prods.item04.href = '#'
+-servNav.prods.item04.title = 'Визитки'
+-servNav.prods.item04.wrap = true
+
+-servNav.prods.item05 = {}
+-servNav.prods.item05.href = '#'
+-servNav.prods.item05.title = 'Футболки'
+-servNav.prods.item05.wrap = false
+
+-servNav.prods.item06 = {}
+-servNav.prods.item06.href = '#'
+-servNav.prods.item06.title = 'Пакеты ПВД'
+-servNav.prods.item06.wrap = false
+
+-servNav.prods.item07 = {}
+-servNav.prods.item07.href = '#'
+-servNav.prods.item07.title = 'Часы'
+-servNav.prods.item07.wrap = true
+
+-servNav.prods.item08 = {}
+-servNav.prods.item08.href = '#'
+-servNav.prods.item08.title = 'Календари'
+-servNav.prods.item08.wrap = false
+
+-servNav.prods.item09 = {}
+-servNav.prods.item09.href = '#'
+-servNav.prods.item09.title = 'Таблички'
+-servNav.prods.item09.wrap = false
+
+-servNav.prods.item10 = {}
+-servNav.prods.item10.href = '#'
+-servNav.prods.item10.title = 'Контрольные браслеты'
+-servNav.prods.item10.wrap = true
+
+-servNav.prods.item11 = {}
+-servNav.prods.item11.href = '#'
+-servNav.prods.item11.title = 'Блокноты'
+-servNav.prods.item11.wrap = false
+
+-servNav.prods.item12 = {}
+-servNav.prods.item12.href = '#'
+-servNav.prods.item12.title = 'Акрилайты'
+-servNav.prods.item12.wrap = false
+
+-servNav.servs = {}
+-servNav.servs.title = 'Услуги'
+
+mixin serv-nav()
+	.serv-nav
+		ul.serv-nav__list
+			each item in servNav
+				li.serv-nav__item
+					span.serv-nav__title=item.title
+					ul.serv-nav__sublist
+						each subitem in item
+							if subitem.href
+								li.serv-nav__subitem
+									a.serv-nav__suba(href=subitem.href)!=subitem.title
+
++serv-nav()

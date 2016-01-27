@@ -1,0 +1,46 @@
+.navigation
+	display none
+	overflow hidden
+	
+	&__list
+		box-sizing content-box
+	
+	&__item
+		display block
+		text-align center
+	&__a
+		display inline-block
+		padding 7px
+		font-size 14px
+		color black
+	
+	@media (min-width md-min)
+		display block
+		margin-bottom 23px
+		
+		@extend $clearfix
+		
+		&__list
+			float right
+			padding 17px 0
+		
+		&__item
+			display inline-block
+		
+		&__a
+			display inline-block
+			font-size 12px
+			font-weight 500
+			text-decoration underline
+			color black
+			padding 5px 0
+			
+		&__item:not(:last-child) &__a
+			margin-right 25px
+		
+		.header--fixed &
+			display none
+	
+	@media (min-width lg-min)
+		&__item:not(:last-child) &__a
+			margin-right 65px

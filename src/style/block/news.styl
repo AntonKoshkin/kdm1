@@ -1,0 +1,45 @@
+.news
+	background-color gray-bgc
+	padding-top 20px
+	padding-bottom 100px
+		
+	&__title
+		mix-news-title()
+		
+		margin-bottom 50px
+	
+.news-item
+	background-color blue-very-light
+	min-height 460px
+	margin-bottom 31px
+	box-shadow 0 3px 5px rgba(black, .1)
+		
+	&__title
+		mix-news-item-title()
+		
+		min-height 50px
+		margin-bottom 15px
+	
+	&__face
+		position relative
+		text-align center
+		margin-bottom 30px
+	
+	&__img
+		width 100%
+		max-height 100%
+
+	&__time
+		mix-news-item-time()
+		
+		position absolute
+		bottom 0
+		left 0
+		padding 8px 16px
+		background-color rgba(black, .7)
+		
+	&__desc
+		padding 0 20px
+	
+	&__text
+		mix-news-item-text()
