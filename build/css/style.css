@@ -1329,7 +1329,12 @@ body {
 .news {
   background-color: #eef3f6;
   padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
+}
+@media (min-width: 1280px) {
+  .news {
+    padding-bottom: 100px;
+  }
 }
 .news__title {
   font-weight: 400;
@@ -1352,6 +1357,7 @@ body {
   color: #0f84d2;
   text-decoration: underline;
   font-weight: 300;
+  line-height: 1.6;
   min-height: 50px;
   margin-bottom: 15px;
 }
@@ -1380,4 +1386,6 @@ body {
 .news-item__text {
   font-size: 14px;
   font-weight: 400;
+  color: #000;
+  line-height: 1.5;
 }
