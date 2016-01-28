@@ -7,6 +7,7 @@
 -newsItem.news_a.title = '1&nbsp;октября&nbsp;повышение&nbsp;цен<br>на&nbsp;календари'
 -newsItem.news_a.text = 'Еще&nbsp;две&nbsp;недели печатаем календари по&nbsp;летним ценам! При&nbsp;заказе от&nbsp;400 календарей трио&nbsp;—&nbsp;дизайн квартальника с&nbsp;дизайнером Таней&nbsp;бесплатно.'
 -newsItem.news_a.alt = 'повышение цен на календари'
+-newsItem.news_a.href = '#'
 
 -newsItem.news_b = {}
 -newsItem.news_b.img = 'img/news__b.jpg'
@@ -15,6 +16,7 @@
 -newsItem.news_b.title = 'Клипарты&nbsp;на&nbsp;2016&nbsp;год —<br>год&nbsp;обезьяны'
 -newsItem.news_b.text = 'Посетители нашего сайта всегда могли скачать у&nbsp;нас все, что&nbsp;нужно для&nbsp;изготовления своих фирменных&nbsp;календарей.'
 -newsItem.news_b.alt = 'Клипарты на 2016 год'
+-newsItem.news_b.href = '#'
 
 -newsItem.news_c = {}
 -newsItem.news_c.img = 'img/news__c.jpg'
@@ -23,6 +25,7 @@
 -newsItem.news_c.title = 'Дизайн календарей бесплатно при&nbsp;заказе от 500 шт.'
 -newsItem.news_c.text = 'Cпешите&nbsp;заказать квартальные&nbsp;календари в&nbsp;августе и&nbsp;получайте бесплатный дизайн календаря с&nbsp;нашим живым дизайнером при&nbsp;заказе от 500 шт. квартальных календарей.'
 -newsItem.news_c.alt = 'Дизайн календарей бесплатно'
+-newsItem.news_c.href = '#'
 
 -newsItem.news_d = {}
 -newsItem.news_d.img = 'img/news__d.jpg'
@@ -31,6 +34,7 @@
 -newsItem.news_d.title = 'Закажи тельняшку с логотипом!'
 -newsItem.news_d.text = 'Хотите быть стильными в&nbsp;наше «Непредсказуемое ПИТЕРСКОЕ лето»? Закажи тельняшку с&nbsp;логотипом!'
 -newsItem.news_d.alt = 'Закажи тельняшку'
+-newsItem.news_d.href = '#'
 
 -newsItem.news_e = {}
 -newsItem.news_e.img = 'img/news__e.jpg'
@@ -39,6 +43,7 @@
 -newsItem.news_e.title = 'Награждение - процесс всегда торжественный'
 -newsItem.news_e.text = 'Наша компания располагает собственным большим производством, что&nbsp;позволяет выполнить нанесение разными способами: гравировкой, УФ-печатью, шелкографией ...'
 -newsItem.news_e.alt = 'Награждение'
+-newsItem.news_e.href = '#'
 
 -newsItem.news_f = {}
 -newsItem.news_f.img = 'img/news__f.jpg'
@@ -47,6 +52,7 @@
 -newsItem.news_f.title = 'Новые размеры и цвета пакетов'
 -newsItem.news_f.text = 'На&nbsp;нашем сайте в&nbsp;разделе полиэтиленовые пакеты&nbsp;ПВД с&nbsp;логотипом появились новые цвета и&nbsp;размеры пакетов&nbsp;ПВД под&nbsp;нанесение ваших логотипов.'
 -newsItem.news_f.alt = 'Новые размеры и цвета'
+-newsItem.news_f.href = '#'
 
 -newsItem.news_g = {}
 -newsItem.news_g.img = 'img/news__g.jpg'
@@ -55,6 +61,7 @@
 -newsItem.news_g.title = 'Пакеты ПВД с логотипом — от 50 шт.'
 -newsItem.news_g.text = 'Очередная антикризисная мера в&nbsp;ПРИНТ САЛОНе — уменьшение минимального количества пакетов&nbsp;ПВД при&nbsp;заказе печати шелкографией до&nbsp;50&nbsp;шт.'
 -newsItem.news_g.alt = 'Пакеты ПВД'
+-newsItem.news_g.href = '#'
 
 -newsItem.news_h = {}
 -newsItem.news_h.img = 'img/news__h.jpg'
@@ -63,16 +70,18 @@
 -newsItem.news_h.title = 'Обучение шелкографии в январе'
 -newsItem.news_h.text = 'Дорогие клиенты! Поздравляем Вас с&nbsp;прошедшими праздниками! Желаем вам&nbsp;побыстрее войти в&nbsp;рабочий ритм, и&nbsp;спешим&nbsp;сообщить о&nbsp;том, что занятия ...'
 -newsItem.news_h.alt = 'Обучение шелкографии'
+-newsItem.news_h.href = '#'
 
 mixin newsItems()
 	each val in newsItem
 		.col-sm-12.col-md-4.col-lg-3
 			.news-item
 				.news-item__face
-					img.news-item__img(src=val.img, alt=val.alt)
+					a.news-item__a(href=val.href)
+						img.news-item__img(src=val.img, alt=val.alt)
 					time.news-item__time(datetime=val.datetime)=val.time
 				.news-item__desc
-					a.news-item__link(href='#')
+					a.news-item__link(href=val.href)
 						h3.news-item__title!=val.title
 					p.news-item__text!=val.text
 
